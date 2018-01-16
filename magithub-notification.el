@@ -103,7 +103,7 @@ get a more verbose explanation."
 (defalias 'magithub-notification-visit #'magithub-notification-browse)
 (defun magithub-notification-browse (notification)
   "Visits the URL pointed to by NOTIFICATION."
-  (interactive (list (magithub-thing-at-point 'notification)))
+  (interactive (list (thing-at-point 'github-notification)))
   (if notification
       (let-alist notification
         (cond

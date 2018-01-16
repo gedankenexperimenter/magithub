@@ -37,7 +37,7 @@
     m))
 
 (defun magithub-repo-browse (repo)
-  (interactive (list (magithub-thing-at-point 'repo)))
+  (interactive (list (thing-at-point 'github-repo)))
   (unless repo
     (user-error "No repository found at point"))
   (let-alist repo
